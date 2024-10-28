@@ -1,22 +1,22 @@
-
 import 'package:flutter/material.dart';
 
 class MyApp extends StatefulWidget {
-  // const MyApp({super.key}); //default constructor
-  //name of the class 
-  MyApp._internalConstructor();
-  static final MyApp _instance = MyApp._internalConstructor(); // singleton or single instance
-  factory MyApp() => _instance; // factory
+  // Private constructor to prevent other classes from creating new instances.
+  MyApp._privateConstructor();
+
+  // Singleton instance
+  static final MyApp _instance = MyApp._privateConstructor();
+
+  // Factory constructor that returns the singleton instance
+  factory MyApp() => _instance;
 
   @override
-  State<MyApp> createState() => _MyState();
+  State<MyApp> createState() => _MyAppState();
 }
 
-class _MyState extends State<MyApp> {
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return const Placeholder();
   }
 }
-
-  
