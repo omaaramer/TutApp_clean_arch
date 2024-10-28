@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../presentation/splash/splash_view.dart';
+
 class MyApp extends StatefulWidget {
   // Private constructor to prevent other classes from creating new instances.
   MyApp._privateConstructor();
@@ -17,6 +19,9 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: SplashView(),
+    );
   }
 }
