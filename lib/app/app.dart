@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../presentation/resources/routes_manager.dart';
+import '../presentation/splash/animated_splash_screen.dart';
 import '../presentation/splash/splash_view.dart';
 
 class MyApp extends StatefulWidget {
@@ -21,7 +23,9 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SplashView(),
+      onGenerateRoute: RouteGenerator.getRoute,
+      initialRoute: Routes.splashRoute,
+      home: AnimatedSplashScreen(),
     );
   }
 }
