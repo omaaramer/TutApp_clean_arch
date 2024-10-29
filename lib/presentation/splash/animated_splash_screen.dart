@@ -1,8 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../resources/assets_manager.dart';
 import '../resources/color_manager.dart';
 import '../resources/routes_manager.dart';
+import '../resources/strings_manager.dart';
 
 class AnimatedSplashScreen extends StatefulWidget {
   const AnimatedSplashScreen({super.key});
@@ -49,7 +49,7 @@ class _AnimatedSplashScreenState extends State<AnimatedSplashScreen>
                 return SlideTransition(
                   position: slidingAnimation,
                   child: const Text(
-                    'Welcome in TUT App',
+                    AppStrings.welcome,
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: ColorManager.white,

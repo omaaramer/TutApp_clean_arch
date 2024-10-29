@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../onBoarding_view/onboarding_view.dart';
+import '../onBoarding/view/onboarding_view.dart';
 import '../splash/splash_view.dart';
 import 'strings_manager.dart';
 
